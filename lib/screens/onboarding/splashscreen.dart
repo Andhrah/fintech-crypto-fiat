@@ -12,21 +12,24 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Container(
-        width: 100,
-        height: 500,
+        // width: 100,
+        height: MediaQuery.of(context).size.height / 1.4,
         decoration: const BoxDecoration(
+          color: Colors.white,
           image: DecorationImage(
-            image: AssetImage('splash_screens_bg.png'),
+            image: AssetImage('assets/images/splash_screen_bg.png'),
             fit: BoxFit.cover,
           ),
         ),
-        // child: Center(
-        //   child: Image.asset(
-        //     "assets/images/syarpa_logo.png",
-        //     height: 250.0,
-        //   )
-        // ),
+        child: Center(
+          child: Image.asset(
+            "assets/images/syarpa_logo.png",
+            // height: MediaQuery.of(context).size.height / 3,
+            width: MediaQuery.of(context).size.width / 1.8,
+          )
+        ),
       ),
     );
   }

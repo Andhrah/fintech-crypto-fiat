@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:syarpa/screens/onboarding/splashscreen.dart';
+import 'package:syarpa/utils/colors.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,6 +13,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+
+    SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(statusBarColor: appPrimaryColor),
+    );
+
     return MaterialApp(
       title: 'Syarpa',
       debugShowCheckedModeBanner: false,
