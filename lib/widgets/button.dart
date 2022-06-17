@@ -24,7 +24,7 @@ class Button extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: onPress,
-      child: isLoading ? const CircularProgressIndicator(color: secondaryColor) : Text(text, style: TextStyle(fontSize: 15.0, color: textColor, fontWeight: FontWeight.w600),),
+      child: isLoading ? const CircularProgressIndicator(color: secondaryColor) : Text(text, style: TextStyle(fontSize: 18.0, color: textColor, fontWeight: FontWeight.w600),),
       style: ButtonStyle(
         backgroundColor: MaterialStateProperty.all(color),
         minimumSize: MaterialStateProperty.all(Size(width, 55.0)),
