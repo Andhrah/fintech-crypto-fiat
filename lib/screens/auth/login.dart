@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:syarpa/screens/auth/forgot_password.dart';
 import 'package:syarpa/screens/auth/signup.dart';
+import 'package:syarpa/screens/auth/two_FA.dart';
 import 'package:syarpa/utils/colors.dart';
 import 'package:syarpa/utils/constant.dart';
 import 'package:syarpa/widgets/button.dart';
@@ -105,7 +106,11 @@ class _LoginScreenState extends State<LoginScreen> {
 
                 Button(
                   text: 'Login to my account', 
-                  onPress: () {}, 
+                  onPress: () {
+                    Navigator.of(context).pushNamed(
+                      TwoFAScreen.id,
+                    );
+                  }, 
                   color: secondaryColor, 
                   width: MediaQuery.of(context).size.width,
                   textColor: whiteColor,

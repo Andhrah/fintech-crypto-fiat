@@ -11,6 +11,7 @@ import 'package:syarpa/screens/auth/password_success.dart';
 import 'package:syarpa/screens/auth/profile_update.dart';
 import 'package:syarpa/screens/auth/reset_password.dart';
 import 'package:syarpa/screens/auth/signup.dart';
+import 'package:syarpa/screens/auth/two_FA.dart';
 import 'package:syarpa/screens/onboarding/onboarding.dart';
 import 'package:syarpa/screens/onboarding/splashscreen.dart';
 import 'package:syarpa/utils/colors.dart';
@@ -60,6 +61,7 @@ class MyApp extends StatelessWidget {
         ForgotPasswordOtp.id: (context) => const ForgotPasswordOtp(),
         ResetPassword.id: (context) => const ResetPassword(),
         PasswordSuccess.id: (context) => const PasswordSuccess(),
+        TwoFAScreen.id: (context) => const TwoFAScreen(),
       }
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
