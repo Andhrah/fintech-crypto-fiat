@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:remixicon/remixicon.dart';
 import 'package:syarpa/screens/auth/login.dart';
+import 'package:syarpa/screens/auth/otp.dart';
 import 'package:syarpa/utils/colors.dart';
 import 'package:syarpa/utils/constant.dart';
 import 'package:syarpa/widgets/basic_input_field.dart';
@@ -196,7 +197,11 @@ class _SignupScreenState extends State<SignupScreen> {
 
                 Button(
                   text: 'Sign Up', 
-                  onPress: () {}, 
+                  onPress: () {
+                    Navigator.of(context).pushNamed(
+                      OtpScreen.id,
+                    );
+                  }, 
                   color: secondaryColor, 
                   width: MediaQuery.of(context).size.width,
                   textColor: whiteColor,
