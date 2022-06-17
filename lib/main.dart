@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:syarpa/screens/auth/login.dart';
 import 'package:syarpa/screens/auth/otp.dart';
+import 'package:syarpa/screens/auth/otp2.dart';
 import 'package:syarpa/screens/auth/otp_verified.dart';
+import 'package:syarpa/screens/auth/otp_verified2.dart';
+import 'package:syarpa/screens/auth/profile_update.dart';
 import 'package:syarpa/screens/auth/signup.dart';
 import 'package:syarpa/screens/onboarding/onboarding.dart';
 import 'package:syarpa/screens/onboarding/splashscreen.dart';
@@ -46,6 +49,9 @@ class MyApp extends StatelessWidget {
         LoginScreen.id: (context) => const LoginScreen(),
         OtpScreen.id: (context) => const OtpScreen(),
         OtpVerifiedScreen.id: (context) => const OtpVerifiedScreen(),
+        ProfileUpdate.id: (context) => const ProfileUpdate(),
+        OtpScreen2.id: (context) => const OtpScreen2(),
+        OtpVerifiedScreen2.id: (context) => const OtpVerifiedScreen2(),
       }
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );

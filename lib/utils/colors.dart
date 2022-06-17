@@ -14,6 +14,7 @@ const Color darkYellow = Color(0xFFF7941F);
 const Color purple = Color(0xFFAB3882);
 const Color greenColor = Color(0xFF008E16);
 const Color deepGreen = Color(0xff23710F);
+const Color ashColor = Color(0xFFC4C4C4);
 const Color disabledColor = Color(0xFFEFF2F7);
 const Color disabledTextColor = Color(0xFFC0CCDA);
 

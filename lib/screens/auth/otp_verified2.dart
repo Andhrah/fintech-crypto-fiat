@@ -1,49 +1,48 @@
 import 'package:flutter/material.dart';
-import 'package:syarpa/screens/auth/profile_update.dart';
 
 import 'package:syarpa/utils/colors.dart';
 import 'package:syarpa/utils/constant.dart';
 
-class OtpVerifiedScreen extends StatefulWidget {
-  static const String id = 'otpVerified';
+class OtpVerifiedScreen2 extends StatefulWidget {
+  static const String id = 'otpVerified2';
 
-  const OtpVerifiedScreen({Key? key}) : super(key: key);
+  const OtpVerifiedScreen2({Key? key}) : super(key: key);
 
   @override
-  _OtpVerifiedScreenState createState() => _OtpVerifiedScreenState();
+  _OtpVerifiedScreen2State createState() => _OtpVerifiedScreen2State();
 }
 
-class _OtpVerifiedScreenState extends State<OtpVerifiedScreen> with SingleTickerProviderStateMixin {
+class _OtpVerifiedScreen2State extends State<OtpVerifiedScreen2> with SingleTickerProviderStateMixin {
 
-  late AnimationController controller;
-  late Animation animation;
+  // late AnimationController controller;
+  // late Animation animation;
 
-  @override
-  void initState() {
-    super.initState();
-    controller = AnimationController(
-      duration: const Duration(seconds: 2), 
-      vsync: this, // the SingleTickerProviderStateMixin
-    );
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   controller = AnimationController(
+  //     duration: const Duration(seconds: 2), 
+  //     vsync: this, // the SingleTickerProviderStateMixin
+  //   );
     
-    controller.forward();
-    // add listner to animation status and
-    // navigate to getStarted screen if animation status is completed
-    controller.addStatusListener((status) { 
-      print('status:$status');
-      if (status == AnimationStatus.completed){
-        Navigator.of(context).pushNamedAndRemoveUntil(
-          ProfileUpdate.id, (route) => false
-        );
-      }
-    });
-  }
+  //   controller.forward();
+  //   // add listner to animation status and
+  //   // navigate to getStarted screen if animation status is completed
+  //   controller.addStatusListener((status) { 
+  //     print('status:$status');
+  //     if (status == AnimationStatus.completed){
+  //       Navigator.of(context).pushNamedAndRemoveUntil(
+  //         ProfileUpdate.id, (route) => false
+  //       );
+  //     }
+  //   });
+  // }
 
-  @override
-  void dispose() {
-    controller.dispose();
-    super.dispose();
-  }
+  // @override
+  // void dispose() {
+  //   controller.dispose();
+  //   super.dispose();
+  // }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
