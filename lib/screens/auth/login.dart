@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syarpa/screens/auth/forgot_password.dart';
 import 'package:syarpa/screens/auth/signup.dart';
 import 'package:syarpa/utils/colors.dart';
 import 'package:syarpa/utils/constant.dart';
@@ -73,8 +74,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   hintText: 'Enter password',
                   suffixIcon: InkWell(
                     onTap: () {},
-                    // height: MediaQuery.of(context).size.height / 20,
-                    // width: MediaQuery.of(context).size.width / 10,
                     child: Image.asset(
                       'assets/images/eye.png',
                     ),
@@ -86,7 +85,11 @@ class _LoginScreenState extends State<LoginScreen> {
                 Align(
                   alignment: Alignment.centerRight,
                   child: TextButton(
-                    onPressed: () {}, 
+                    onPressed: () {
+                      Navigator.of(context).pushNamed(
+                        ForgotPasswordScreen.id,
+                      );
+                    }, 
                     child: const Text(
                       'Forgot Password?',
                       style: TextStyle(

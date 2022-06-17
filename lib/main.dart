@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:syarpa/screens/auth/forgot_password.dart';
+import 'package:syarpa/screens/auth/forgot_password_otp.dart';
 import 'package:syarpa/screens/auth/login.dart';
 import 'package:syarpa/screens/auth/otp.dart';
 import 'package:syarpa/screens/auth/otp2.dart';
@@ -52,6 +54,8 @@ class MyApp extends StatelessWidget {
         ProfileUpdate.id: (context) => const ProfileUpdate(),
         OtpScreen2.id: (context) => const OtpScreen2(),
         OtpVerifiedScreen2.id: (context) => const OtpVerifiedScreen2(),
+        ForgotPasswordScreen.id: (context) => const ForgotPasswordScreen(),
+        ForgotPasswordOtp.id: (context) => const ForgotPasswordOtp(),
       }
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
