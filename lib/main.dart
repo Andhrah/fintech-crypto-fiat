@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:syarpa/screens/auth/signup.dart';
 import 'package:syarpa/screens/onboarding/onboarding.dart';
 import 'package:syarpa/screens/onboarding/splashscreen.dart';
 import 'package:syarpa/utils/colors.dart';
@@ -38,6 +39,7 @@ class MyApp extends StatelessWidget {
       routes: {
         SplashScreen.id: (context) => const SplashScreen(),
         OnboardingScreen.id: (context) => const OnboardingScreen(),
+        SignupScreen.id: (context) => const SignupScreen(),
       }
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );

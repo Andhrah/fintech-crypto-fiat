@@ -27,11 +27,11 @@ class Button extends StatelessWidget {
       child: isLoading ? const CircularProgressIndicator(color: secondaryColor) : Text(text, style: TextStyle(fontSize: 18.0, color: textColor, fontWeight: FontWeight.w600),),
       style: ButtonStyle(
         backgroundColor: MaterialStateProperty.all(color),
-        minimumSize: MaterialStateProperty.all(Size(width, 55.0)),
+        minimumSize: MaterialStateProperty.all(Size(width, 50.0)),
         elevation: MaterialStateProperty.all(0.0),
         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(5.0),
+            borderRadius: BorderRadius.circular(10.0),
             side: BorderSide(color: appPrimaryColor.withOpacity(0.1)),
           )
         )

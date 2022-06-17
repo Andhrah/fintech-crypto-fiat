@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:syarpa/screens/auth/signup.dart';
 import 'package:syarpa/utils/colors.dart';
 
 import 'package:syarpa/widgets/button.dart';
@@ -213,13 +214,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         textColor: const Color(0XFFFFFFFF),
                         isLoading: false,
                         width: MediaQuery.of(context).size.width / 1.2,
-                        onPress: () {},
-                        // onPress: () {
-                        //   currentScreen != 4 ? buttonCarouselController.nextPage() :
-                        //   Navigator.of(context).pushNamedAndRemoveUntil(
-                        //     Home.id, (route) => false
-                        //   );
-                        // },
+                        onPress: () {
+                          Navigator.of(context).pushNamedAndRemoveUntil(
+                            SignupScreen.id, (route) => false
+                          );
+                        },
                       ),
 
                       const SizedBox(height: 20.0),
