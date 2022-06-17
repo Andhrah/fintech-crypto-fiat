@@ -14,6 +14,8 @@ const Color darkYellow = Color(0xFFF7941F);
 const Color purple = Color(0xFFAB3882);
 const Color green = Color(0xFF00BA48);
 const Color deepGreen = Color(0xff23710F);
+const Color disabledColor = Color(0xFFEFF2F7);
+const Color disabledTextColor = Color(0xFFC0CCDA);
 
 const Color lightNavi = Color.fromRGBO(9, 66, 125, 0.35);
 const Color teal = Color(0xFF47A08B);
