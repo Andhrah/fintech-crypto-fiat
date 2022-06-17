@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:remixicon/remixicon.dart';
+import 'package:syarpa/screens/auth/login.dart';
 import 'package:syarpa/utils/colors.dart';
 import 'package:syarpa/utils/constant.dart';
 import 'package:syarpa/widgets/basic_input_field.dart';
@@ -34,7 +35,11 @@ class _SignupScreenState extends State<SignupScreen> {
                 ),
 
                 TextButton(
-                  onPressed: () {}, 
+                  onPressed: () {
+                    Navigator.of(context).pushNamedAndRemoveUntil(
+                      LoginScreen.id, (route) => false
+                    );
+                  }, 
                   child: RichText(
                     textScaleFactor: 0.9,
                     text: const TextSpan(

@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:syarpa/screens/auth/login.dart';
 import 'package:syarpa/screens/auth/signup.dart';
 import 'package:syarpa/utils/colors.dart';
 
@@ -224,7 +225,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       const SizedBox(height: 20.0),
 
                       TextButton(
-                        onPressed: () {}, 
+                        onPressed: () {
+                          Navigator.of(context).pushNamedAndRemoveUntil(
+                            LoginScreen.id, (route) => false
+                          );
+                        }, 
                         child: const Text(
                           'Login to account',
                           style: TextStyle(
