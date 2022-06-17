@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:syarpa/screens/auth/otp_verified.dart';
+import 'package:syarpa/screens/auth/reset_password.dart';
 import 'package:syarpa/utils/colors.dart';
 import 'package:syarpa/utils/constant.dart';
 import 'package:syarpa/widgets/back_icon.dart';
@@ -149,7 +150,7 @@ class _ForgotPasswordOtpState extends State<ForgotPasswordOtp> {
                 text: 'Continue', 
                 onPress: () {
                   Navigator.of(context).pushNamedAndRemoveUntil(
-                    OtpVerifiedScreen.id, (route) => false
+                    ResetPassword.id, (route) => false
                   );
                 }, 
                 color: disabledColor, 

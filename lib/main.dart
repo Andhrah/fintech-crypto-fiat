@@ -7,7 +7,9 @@ import 'package:syarpa/screens/auth/otp.dart';
 import 'package:syarpa/screens/auth/otp2.dart';
 import 'package:syarpa/screens/auth/otp_verified.dart';
 import 'package:syarpa/screens/auth/otp_verified2.dart';
+import 'package:syarpa/screens/auth/password_success.dart';
 import 'package:syarpa/screens/auth/profile_update.dart';
+import 'package:syarpa/screens/auth/reset_password.dart';
 import 'package:syarpa/screens/auth/signup.dart';
 import 'package:syarpa/screens/onboarding/onboarding.dart';
 import 'package:syarpa/screens/onboarding/splashscreen.dart';
@@ -56,6 +58,8 @@ class MyApp extends StatelessWidget {
         OtpVerifiedScreen2.id: (context) => const OtpVerifiedScreen2(),
         ForgotPasswordScreen.id: (context) => const ForgotPasswordScreen(),
         ForgotPasswordOtp.id: (context) => const ForgotPasswordOtp(),
+        ResetPassword.id: (context) => const ResetPassword(),
+        PasswordSuccess.id: (context) => const PasswordSuccess(),
       }
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
