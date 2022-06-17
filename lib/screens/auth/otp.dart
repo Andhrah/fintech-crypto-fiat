@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:pin_code_fields/pin_code_fields.dart';
+import 'package:syarpa/screens/auth/otp_verified.dart';
 import 'package:syarpa/utils/colors.dart';
 import 'package:syarpa/utils/constant.dart';
 import 'package:syarpa/widgets/back_icon.dart';
@@ -146,7 +147,11 @@ class _OtpScreenState extends State<OtpScreen> {
 
               Button(
                 text: 'Continue', 
-                onPress: () {}, 
+                onPress: () {
+                  Navigator.of(context).pushNamedAndRemoveUntil(
+                    OtpVerifiedScreen.id, (route) => false
+                  );
+                }, 
                 color: disabledColor, 
                 width: MediaQuery.of(context).size.width,
                 textColor: disabledTextColor, 
