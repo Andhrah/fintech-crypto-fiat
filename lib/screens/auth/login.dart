@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:remixicon/remixicon.dart';
 import 'package:syarpa/screens/auth/forgot_password.dart';
 import 'package:syarpa/screens/auth/signup.dart';
 import 'package:syarpa/screens/auth/two_FA.dart';
@@ -17,6 +18,9 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+
+  bool isChecked = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -83,35 +87,73 @@ class _LoginScreenState extends State<LoginScreen> {
 
                 const SizedBox(height: 5),
 
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: TextButton(
-                    onPressed: () {
-                      Navigator.of(context).pushNamed(
-                        ForgotPasswordScreen.id,
-                      );
-                    }, 
-                    child: const Text(
-                      'Forgot Password?',
-                      style: TextStyle(
-                        color: lightBlueColor,
-                        fontSize: 14.0,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  // crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Checkbox(
+                          checkColor: Colors.white,
+                          // fillColor: Colors.blue![400],
+                          activeColor: lightBlueColor,
+                          value: isChecked,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(3.0),
+                          ),
+                          side: const BorderSide(color: blueGrayColor),
+                          onChanged: (bool? value) {
+                            setState(() {
+                              isChecked = value!;
+                            });
+                          },
+                        ),
+
+                        const Text(
+                          "Remember me",
+                          style: TextStyle(
+                            fontSize: 16.0,
+                            color: lightGrayColor,
+                          ),
+                        ),
+                      ],
+                    ),
+
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.of(context).pushNamed(
+                            ForgotPasswordScreen.id,
+                          );
+                        }, 
+                        child: const Text(
+                          'Forgot Password?',
+                          style: TextStyle(
+                            color: lightBlueColor,
+                            fontSize: 14.0,
+                          ),
+                        ),
                       ),
                     ),
-                  ),
+                  ],
                 ),
+
+                
+                
 
                 kSizeBox,
                 kSizeBox,
 
                 Button(
-                  text: 'Login to my account', 
+                  text: 'Continue', 
+                  icon: Container(),
                   onPress: () {
                     Navigator.of(context).pushNamed(
                       TwoFAScreen.id,
                     );
                   }, 
-                  color: secondaryColor, 
+                  color: appPrimaryColor, 
                   width: MediaQuery.of(context).size.width,
                   textColor: whiteColor,
                   isLoading: false

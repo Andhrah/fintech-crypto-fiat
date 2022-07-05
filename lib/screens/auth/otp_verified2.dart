@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:syarpa/screens/home/home.dart';
+import 'package:syarpa/screens/tab.dart';
 
 import 'package:syarpa/utils/colors.dart';
 import 'package:syarpa/utils/constant.dart';
@@ -14,35 +16,35 @@ class OtpVerifiedScreen2 extends StatefulWidget {
 
 class _OtpVerifiedScreen2State extends State<OtpVerifiedScreen2> with SingleTickerProviderStateMixin {
 
-  // late AnimationController controller;
-  // late Animation animation;
+  late AnimationController controller;
+  late Animation animation;
 
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   controller = AnimationController(
-  //     duration: const Duration(seconds: 2), 
-  //     vsync: this, // the SingleTickerProviderStateMixin
-  //   );
+  @override
+  void initState() {
+    super.initState();
+    controller = AnimationController(
+      duration: const Duration(seconds: 2), 
+      vsync: this, // the SingleTickerProviderStateMixin
+    );
     
-  //   controller.forward();
-  //   // add listner to animation status and
-  //   // navigate to getStarted screen if animation status is completed
-  //   controller.addStatusListener((status) { 
-  //     print('status:$status');
-  //     if (status == AnimationStatus.completed){
-  //       Navigator.of(context).pushNamedAndRemoveUntil(
-  //         ProfileUpdate.id, (route) => false
-  //       );
-  //     }
-  //   });
-  // }
+    controller.forward();
+    // add listner to animation status and
+    // navigate to getStarted screen if animation status is completed
+    controller.addStatusListener((status) { 
+      print('status:$status');
+      if (status == AnimationStatus.completed){
+        Navigator.of(context).pushNamedAndRemoveUntil(
+          Tabs.id, (route) => false
+        );
+      }
+    });
+  }
 
-  // @override
-  // void dispose() {
-  //   controller.dispose();
-  //   super.dispose();
-  // }
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(

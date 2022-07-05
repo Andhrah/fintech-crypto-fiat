@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:pin_code_fields/pin_code_fields.dart';
+import 'package:remixicon/remixicon.dart';
 import 'package:syarpa/screens/auth/otp_verified.dart';
 import 'package:syarpa/screens/auth/otp_verified2.dart';
 import 'package:syarpa/utils/colors.dart';
@@ -147,15 +148,16 @@ class _OtpScreen2State extends State<OtpScreen2> {
               kSizeBox,kSizeBox,
 
               Button(
-                text: 'Continue', 
+                text: 'Confirm', 
+                icon: const Icon(Remix.arrow_right_line),
                 onPress: () {
                   Navigator.of(context).pushNamedAndRemoveUntil(
                     OtpVerifiedScreen2.id, (route) => false
                   );
                 }, 
-                color: disabledColor, 
+                color: appPrimaryColor, 
                 width: MediaQuery.of(context).size.width,
-                textColor: disabledTextColor, 
+                textColor: whiteColor, 
                 isLoading: false
               )
             ],

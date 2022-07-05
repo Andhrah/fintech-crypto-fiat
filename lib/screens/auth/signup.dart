@@ -196,13 +196,14 @@ class _SignupScreenState extends State<SignupScreen> {
                 const SizedBox(height: 10),
 
                 Button(
-                  text: 'Sign Up', 
+                  text: 'Sign Up',
+                  icon: const Icon(Remix.arrow_right_line),
                   onPress: () {
                     Navigator.of(context).pushNamed(
                       OtpScreen.id,
                     );
                   }, 
-                  color: secondaryColor, 
+                  color: appPrimaryColor, 
                   width: MediaQuery.of(context).size.width,
                   textColor: whiteColor,
                   isLoading: false

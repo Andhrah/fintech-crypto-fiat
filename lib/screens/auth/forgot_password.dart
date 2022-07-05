@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:pin_code_fields/pin_code_fields.dart';
+import 'package:remixicon/remixicon.dart';
 import 'package:syarpa/screens/auth/forgot_password_otp.dart';
 import 'package:syarpa/screens/auth/otp_verified.dart';
 import 'package:syarpa/utils/colors.dart';
@@ -72,7 +73,8 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
               kSizeBox,kSizeBox,
 
               Button(
-                text: 'Submit', 
+                text: 'Submit',
+                icon: const Icon(Remix.arrow_right_line), 
                 onPress: () {
                   Navigator.of(context).pushNamedAndRemoveUntil(
                     ForgotPasswordOtp.id, (route) => false

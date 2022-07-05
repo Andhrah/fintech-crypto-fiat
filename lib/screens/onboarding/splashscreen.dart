@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:syarpa/screens/onboarding/onboarding.dart';
+import 'package:syarpa/utils/colors.dart';
 
 class SplashScreen extends StatefulWidget {
   static String id = 'splashScreen';
@@ -17,6 +19,12 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
 
   @override
   void initState() {
+    SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(
+        statusBarColor: appPrimaryColor,
+        statusBarIconBrightness: Brightness.light,
+      ),
+    );
     super.initState();
     controller = AnimationController(
       duration: const Duration(seconds: 2), 
@@ -44,6 +52,12 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
 
   @override
   Widget build(BuildContext context) {
+    // SystemChrome.setSystemUIOverlayStyle(
+    //   const SystemUiOverlayStyle(
+    //     statusBarColor: appPrimaryColor,
+    //     statusBarIconBrightness: Brightness.light,
+    //   ),
+    // );
     return Scaffold(
       backgroundColor: Colors.white,
       body: Container(

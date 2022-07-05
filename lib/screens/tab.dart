@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:remixicon/remixicon.dart';
 import 'package:syarpa/screens/home/home.dart';
+import 'package:syarpa/screens/wallet/wallet.dart';
 import 'package:syarpa/utils/colors.dart';
 
 
@@ -38,7 +40,7 @@ class _TabsState extends State<Tabs> {
         return const HomeScreen();
       case 1 :
         currentTitle = 'Wallet';
-        return Container();
+        return const WalletScreen();
       case 2 :
         currentTitle = 'Order';
         return Container();
@@ -77,47 +79,45 @@ class _TabsState extends State<Tabs> {
         showUnselectedLabels: true,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(
-              Remix.home_7_line,
-              color: _selectedIndex != 0 ? secondaryColor : grayColor
+            icon: SvgPicture.asset("assets/images/home_icon.svg",
+              color: _selectedIndex == 0 ? secondaryColor : lightGrayColor
             ),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Remix.shopping_cart_2_line,
-              color: _selectedIndex != 1 ? secondaryColor : grayColor
+            icon: SvgPicture.asset("assets/images/wallet_icon.svg",
+              color: _selectedIndex == 1 ? secondaryColor : lightGrayColor
             ),
             label: 'Wallet',
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Remix.file_list_fill,
-              color: _selectedIndex != 2 ? secondaryColor : grayColor
+            icon: Card(
+              child: Padding(
+                padding: const EdgeInsets.all(7.0),
+                child: SvgPicture.asset("assets/images/send_icon.svg",
+                  color: _selectedIndex == 2 ? secondaryColor : lightGrayColor
+                ),
+              )
+              
             ),
             label: 'Send',
           ),
           BottomNavigationBarItem(
-            // icon: SvgPicture.asset("assets/images/cart_icon.svg",
-            //   color: _selectedIndex != 3 ? appPrimaryColor : secondaryColor
-            // ),
-            icon: Icon(
-              Remix.wallet_2_line,
-              color: _selectedIndex != 3 ? secondaryColor : grayColor
+            icon: SvgPicture.asset("assets/images/recipient_icon.svg",
+              color: _selectedIndex == 3 ? secondaryColor : lightGrayColor
             ),
-            label: 'Wallet',
+            label: 'Recipient',
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Remix.user_2_line,
-              color: _selectedIndex != 4 ? appPrimaryColor : secondaryColor
+            icon: SvgPicture.asset("assets/images/profile_icon.svg",
+              color: _selectedIndex == 4 ? secondaryColor : lightGrayColor
             ),
             label: 'Profile',
           ),
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: secondaryColor,
-        unselectedItemColor: appPrimaryColor,
+        unselectedItemColor: lightGrayColor,
         onTap: _onItemTapped,
       )
     );

@@ -10,6 +10,7 @@ class Button extends StatelessWidget {
     this.borderColor,
     required this.textColor,
     required this.isLoading,
+    required this.icon,
   }) : super(key: key);
 
   final String text;
@@ -19,12 +20,26 @@ class Button extends StatelessWidget {
   final Color? borderColor;
   final Color textColor;
   final bool isLoading;
+  final Widget icon;
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: onPress,
-      child: isLoading ? const CircularProgressIndicator(color: secondaryColor) : Text(text, style: TextStyle(fontSize: 18.0, color: textColor, fontWeight: FontWeight.w600),),
+      child: isLoading ? const CircularProgressIndicator(color: secondaryColor) : Container(
+        // color: Colors.pink,
+        // alignment: Alignment.center,
+        width: MediaQuery.of(context).size.width / 1.2,
+        child:  Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(text, style: TextStyle(fontSize: 18.0, color: textColor, fontWeight: FontWeight.w600)),
+            const SizedBox(width: 10.0),
+            icon,
+          ],
+        ),
+      ),
+     
       style: ButtonStyle(
         backgroundColor: MaterialStateProperty.all(color),
         minimumSize: MaterialStateProperty.all(Size(width, 50.0)),

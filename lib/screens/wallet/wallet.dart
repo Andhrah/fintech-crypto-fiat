@@ -6,17 +6,17 @@ import 'package:syarpa/utils/colors.dart';
 import 'package:syarpa/utils/constant.dart';
 import 'package:syarpa/widgets/button.dart';
 
-class HomeScreen extends StatefulWidget {
+class WalletScreen extends StatefulWidget {
   
-  static const String id = 'home';
+  static const String id = 'wallet';
 
-  const HomeScreen({Key? key}) : super(key: key);
+  const WalletScreen({Key? key}) : super(key: key);
 
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  _WalletScreenState createState() => _WalletScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _WalletScreenState extends State<WalletScreen> {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
@@ -232,46 +232,52 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
 
+                 kSizeBox,  kSizeBox,
+
                 Container(
                   // color: Colors.pink,
-                  height: MediaQuery.of(context).size.height / 3,
-                  width: MediaQuery.of(context).size.width / 1.7,
+                  height: MediaQuery.of(context).size.height ,
+                  width: MediaQuery.of(context).size.width / 1.1,
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
+                    // mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Image.asset(
-                        'assets/images/fund_img.png',
-                        width: 76,
-                        height: 76,
-                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Image.asset(
+                            'assets/images/naira_wallet.png',
+                            width: 177,
+                            height: 127,
+                          ),
 
+                          Image.asset(
+                            'assets/images/gbp_wallet.png',
+                            width: 177,
+                            height: 127,
+                          ),
+                        ],
+                      ),
                       kSizeBox10,
 
-                      const Text(
-                        "You haven't sent or received\nany funds yet",
-                        style: TextStyle(
-                          color: lightGrayColor,
-                          fontWeight: FontWeight.w400,
-                          fontSize: 18.0
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: Image.asset(
+                          'assets/images/usd_wallet.png',
+                          width: 177,
+                          height: 127,
                         ),
-                        textAlign: TextAlign.center,
                       ),
 
-                      kSizeBox,kSizeBox10,
+                      kSizeBox10,kSizeBox10,
 
-                      Button(
-                        text: 'Add your first fund',
-                        icon: const Icon(Remix.arrow_right_line),
-                        onPress: () {
-                          // Navigator.of(context).pushNamed(
-                          //   Send.id,
-                          // );
-                        }, 
-                        color: ashCyanColor, 
-                        width: MediaQuery.of(context).size.width,
-                        textColor: whiteColor,
-                        isLoading: false
-                      ),
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: Image.asset(
+                          'assets/images/ads.png',
+                          width: 378,
+                          height: 124,
+                        ),
+                      )
                     ],
                   )
                 )

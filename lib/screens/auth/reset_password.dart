@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:remixicon/remixicon.dart';
 
 import 'package:syarpa/screens/auth/forgot_password_otp.dart';
 import 'package:syarpa/screens/auth/password_success.dart';
@@ -92,7 +93,8 @@ class _ResetPasswordState extends State<ResetPassword> {
               kSizeBox,kSizeBox,
 
               Button(
-                text: 'Submit', 
+                text: 'Submit',
+                icon: const Icon(Remix.arrow_right_line),
                 onPress: () {
                   Navigator.of(context).pushNamedAndRemoveUntil(
                     PasswordSuccess.id, (route) => false

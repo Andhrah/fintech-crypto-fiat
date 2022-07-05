@@ -15,6 +15,7 @@ import 'package:syarpa/screens/auth/two_FA.dart';
 import 'package:syarpa/screens/onboarding/onboarding.dart';
 import 'package:syarpa/screens/onboarding/splashscreen.dart';
 import 'package:syarpa/screens/tab.dart';
+import 'package:syarpa/screens/wallet/wallet.dart';
 import 'package:syarpa/utils/colors.dart';
 
 void main() {
@@ -29,7 +30,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
 
     SystemChrome.setSystemUIOverlayStyle(
-      const SystemUiOverlayStyle(statusBarColor: appPrimaryColor),
+      const SystemUiOverlayStyle(
+        statusBarColor: whiteColor,
+        statusBarIconBrightness: Brightness.dark,
+      ),
     );
 
     return MaterialApp(
@@ -45,7 +49,7 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        // primarySwatch: Colors.blue,
       ),
       initialRoute: SplashScreen.id,
       routes: {

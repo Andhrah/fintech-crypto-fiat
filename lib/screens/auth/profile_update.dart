@@ -275,13 +275,14 @@ class _ProfileUpdateState extends State<ProfileUpdate>  {
                 kSizeBox,
 
                 Button(
-                  text: 'Next', 
+                  text: 'Next',
+                  icon: Container(),
                   onPress: () {
                     Navigator.of(context).pushNamed(
                       OtpScreen2.id,
                     );
                   }, 
-                  color: secondaryColor, 
+                  color: appPrimaryColor, 
                   width: MediaQuery.of(context).size.width,
                   textColor: whiteColor,
                   isLoading: false

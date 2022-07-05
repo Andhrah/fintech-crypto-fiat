@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:remixicon/remixicon.dart';
 import 'package:syarpa/screens/auth/login.dart';
 import 'package:syarpa/screens/auth/profile_update.dart';
 
@@ -61,7 +62,8 @@ class _PasswordSuccessState extends State<PasswordSuccess>  {
               kSizeBox,kSizeBox,
 
               Button(
-                text: 'Login', 
+                text: 'Login',
+                icon: const Icon(Remix.arrow_right_line),
                 onPress: () {
                   Navigator.of(context).pushNamedAndRemoveUntil(
                     LoginScreen.id, (route) => false

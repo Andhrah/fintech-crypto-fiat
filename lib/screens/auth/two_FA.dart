@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:remixicon/remixicon.dart';
+import 'package:syarpa/screens/tab.dart';
 
-import 'package:syarpa/screens/auth/otp_verified.dart';
 import 'package:syarpa/utils/colors.dart';
 import 'package:syarpa/utils/constant.dart';
 import 'package:syarpa/widgets/back_icon.dart';
@@ -42,7 +43,7 @@ class _TwoFAScreenState extends State<TwoFAScreen> {
                       'Protect your account',
                       textScaleFactor: 1.4,
                       style: TextStyle(
-                        color: appPrimaryColor,
+                        color: deepBlueColor,
                         fontWeight: FontWeight.w600,
                       ),
                     )
@@ -214,7 +215,8 @@ class _TwoFAScreenState extends State<TwoFAScreen> {
                 kSizeBox,kSizeBox,
 
                 Button(
-                  text: 'Confirm', 
+                  text: 'Continue',
+                  icon: Container(),
                   onPress: () {
                     // Navigator.of(context).pushNamedAndRemoveUntil(
                     //   OtpVerifiedScreen.id, (route) => false
@@ -230,9 +232,9 @@ class _TwoFAScreenState extends State<TwoFAScreen> {
 
                 TextButton(
                   onPressed: () {
-                    // Navigator.of(context).pushNamedAndRemoveUntil(
-                    //   LoginScreen.id, (route) => false
-                    // );
+                    Navigator.of(context).pushNamedAndRemoveUntil(
+                      Tabs.id, (route) => false
+                    );
                   }, 
                   child: const Text(
                     'Skip for now',
