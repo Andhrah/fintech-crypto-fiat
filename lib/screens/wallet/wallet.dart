@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:remixicon/remixicon.dart';
+import 'package:syarpa/screens/wallet/naira_wallet.dart';
 import 'package:syarpa/utils/colors.dart';
 import 'package:syarpa/utils/constant.dart';
-import 'package:syarpa/widgets/button.dart';
+import 'package:syarpa/widgets/wallet_card.dart';
 
 class WalletScreen extends StatefulWidget {
   
@@ -34,21 +35,7 @@ class _WalletScreenState extends State<WalletScreen> {
                 Container(
                   color: appPrimaryColor,
                   padding: const EdgeInsets.symmetric(horizontal: 25.0, vertical: 10.0),
-                  height: MediaQuery.of(context).size.height / 3.5,
-                  // decoration: const BoxDecoration(
-                  //   color: Colors.white,
-                  //   image: DecorationImage(
-                  //     image: AssetImage('assets/images/home_background.png'),
-                  //     fit: BoxFit.cover,
-                  //   ),
-                  // ),
-                  // child: Center(
-                  //   child: Image.asset(
-                  //     "assets/images/syarpa_logo.png",
-                  //     // height: MediaQuery.of(context).size.height / 3,
-                  //     width: MediaQuery.of(context).size.width / 1.8,
-                  //   )
-                  // ),
+                  height: MediaQuery.of(context).size.height / 3.4,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -236,24 +223,33 @@ class _WalletScreenState extends State<WalletScreen> {
 
                 Container(
                   // color: Colors.pink,
-                  height: MediaQuery.of(context).size.height ,
-                  width: MediaQuery.of(context).size.width / 1.1,
+                  height: MediaQuery.of(context).size.height,
+                  width: MediaQuery.of(context).size.width,
+                  padding: const EdgeInsets.symmetric(horizontal: 13.0),
                   child: Column(
                     // mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Image.asset(
-                            'assets/images/naira_wallet.png',
-                            width: 177,
-                            height: 127,
+                          WalletCard(
+                            bgImgUrl: "assets/images/naira_wallet.png", 
+                            walletTypeIcon: "assets/images/naira_wallet_icon.png", 
+                            walletTypeText: "Naira wallet",
+                            walletAmountText: "₦0.00",
+                            onPress: (){
+                              Navigator.of(context).pushNamed(
+                                NairaWalletScreen.id,
+                              );
+                            },
                           ),
 
-                          Image.asset(
-                            'assets/images/gbp_wallet.png',
-                            width: 177,
-                            height: 127,
+                          WalletCard(
+                            bgImgUrl: "assets/images/gbp_wallet.png", 
+                            walletTypeIcon: "assets/images/gbp_wallet_icon.png", 
+                            walletTypeText: "GBP wallet", 
+                            walletAmountText: "£0.00",
+                            onPress: (){},
                           ),
                         ],
                       ),
@@ -261,22 +257,62 @@ class _WalletScreenState extends State<WalletScreen> {
 
                       Align(
                         alignment: Alignment.centerLeft,
-                        child: Image.asset(
-                          'assets/images/usd_wallet.png',
-                          width: 177,
-                          height: 127,
+                        child: WalletCard(
+                          bgImgUrl: "assets/images/usd_wallet.png", 
+                          walletTypeIcon: "assets/images/usd_wallet_icon.png", 
+                          walletTypeText: "USD wallet", 
+                          walletAmountText: "\$0.00",
+                          onPress: (){},
                         ),
                       ),
 
                       kSizeBox10,kSizeBox10,
 
-                      Align(
+                      Container(
                         alignment: Alignment.centerLeft,
-                        child: Image.asset(
-                          'assets/images/ads.png',
-                          width: 378,
-                          height: 124,
+                        padding: const EdgeInsets.only(left: 15.0),
+                        width: MediaQuery.of(context).size.width,
+                        height: MediaQuery.of(context).size.height / 6.8,
+                        decoration: const BoxDecoration(
+                          color: Colors.white,
+                          image: DecorationImage(
+                            image: AssetImage("assets/images/ads.png"),
+                            // fit: BoxFit.cover,
+                          ),
                         ),
+                        child: TextButton(
+                          onPressed: (){}, 
+                          child: RichText(
+                            textScaleFactor: 1.0,
+                            text: const TextSpan(
+                              text: "Get the first two\ntransfers\n",
+                              style: TextStyle(
+                                height: 1.5,
+                                color: whiteColor,
+                                fontWeight: FontWeight.w700,
+                              ),
+                              children: <TextSpan>[
+                                TextSpan(
+                                  text: "for Free!\n", 
+                                  style: TextStyle(
+                                    height: 1.5,
+                                    fontWeight: FontWeight.bold, 
+                                    color: Color(0xFF23C1A9)
+                                  )
+                                ),
+
+                                TextSpan(
+                                  text: "Start now", 
+                                  style: TextStyle(
+                                    fontSize: 8.0,
+                                    fontWeight: FontWeight.w400, 
+                                    color: whiteColor,
+                                  )
+                                ),
+                              ],
+                            ),
+                          ),
+                        )
                       )
                     ],
                   )

@@ -34,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Container(
                   color: appPrimaryColor,
                   padding: const EdgeInsets.symmetric(horizontal: 25.0, vertical: 10.0),
-                  height: MediaQuery.of(context).size.height / 3.5,
+                  height: MediaQuery.of(context).size.height / 3.4,
                   // decoration: const BoxDecoration(
                   //   color: Colors.white,
                   //   image: DecorationImage(

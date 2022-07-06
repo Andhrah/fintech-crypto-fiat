@@ -118,7 +118,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                // const SizedBox(height: 10.0),
                 Expanded(
                   flex: 1,
                   child: Row(
@@ -171,7 +170,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             
                             SizedBox(
                               // color: Colors.pink,
-                              height: 50.0,
+                              height: 45.0,
                               child: Align(
                                 alignment: Alignment.bottomLeft,
                                 child: AnimatedOpacity(
@@ -192,47 +191,34 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             ),
                             Container(
                               alignment: Alignment.bottomLeft,
-                              // color: blueGrayColor,
                               margin: const EdgeInsets.only(top: 15),
                               width: MediaQuery.of(context).size.width,
-                              // color: appPrimaryColor,
-                              child: SizedBox(
-                                height: 40.0,
-                                width: 300.0,
-                                child: Center(
-                                  child: AnimatedOpacity(
-                                    duration: const Duration(milliseconds: 100),
-                                    opacity: _widget_opacity,
-                                    curve: _animation_curve,
-                                    child: Column(
-                                      children: [
-                                        Text(
-                                          screenStates[currentScreenIndex]['pageText'][1],
-                                          style: const TextStyle(
-                                            fontSize: 16,
-                                            color: whiteColor,
-                                          ),
-                                          // textAlign: TextAlign.center,
-                                        ),
-                                      ],
+                              height: MediaQuery.of(context).size.height / 12,
+                              child: AnimatedOpacity(
+                                duration: const Duration(milliseconds: 100),
+                                opacity: _widget_opacity,
+                                curve: _animation_curve,
+                                child: Column(
+                                  children: [
+                                    Text(
+                                      screenStates[currentScreenIndex]['pageText'][1],
+                                      style: const TextStyle(
+                                        fontSize: 16,
+                                        color: whiteColor,
+                                      ),
                                     ),
-                                  )
-                                )
+                                  ],
+                                ),
                               )
                             ),
-                            Container(
-                              // color: Colors.pink,
-                              margin: const EdgeInsets.only(top: 20),
-                              child: Row(
-                                // crossAxisAlignment: CrossAxisAlignment.end,
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: <Widget>[
-                                  IndicatorCircle(currentScreen == 1),
-                                  IndicatorCircle(currentScreen == 2),
-                                  IndicatorCircle(currentScreen == 3),
-                                  IndicatorCircle(currentScreen == 4)
-                                ],
-                              ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: <Widget>[
+                                IndicatorCircle(currentScreen == 1),
+                                IndicatorCircle(currentScreen == 2),
+                                IndicatorCircle(currentScreen == 3),
+                                IndicatorCircle(currentScreen == 4)
+                              ],
                             ),
                           ],
                         )

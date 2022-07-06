@@ -15,6 +15,7 @@ import 'package:syarpa/screens/auth/two_FA.dart';
 import 'package:syarpa/screens/onboarding/onboarding.dart';
 import 'package:syarpa/screens/onboarding/splashscreen.dart';
 import 'package:syarpa/screens/tab.dart';
+import 'package:syarpa/screens/wallet/naira_wallet.dart';
 import 'package:syarpa/screens/wallet/wallet.dart';
 import 'package:syarpa/utils/colors.dart';
 
@@ -51,7 +52,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         // primarySwatch: Colors.blue,
       ),
-      initialRoute: SplashScreen.id,
+      initialRoute: Tabs.id,
       routes: {
         SplashScreen.id: (context) => const SplashScreen(),
         OnboardingScreen.id: (context) => const OnboardingScreen(),
@@ -68,6 +69,7 @@ class MyApp extends StatelessWidget {
         PasswordSuccess.id: (context) => const PasswordSuccess(),
         TwoFAScreen.id: (context) => const TwoFAScreen(),
         Tabs.id: (context) => const Tabs(),
+        NairaWalletScreen.id: (context) => const NairaWalletScreen(),
       }
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
