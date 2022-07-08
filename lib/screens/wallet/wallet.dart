@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:remixicon/remixicon.dart';
+import 'package:syarpa/screens/wallet/dollar_wallet.dart';
 import 'package:syarpa/screens/wallet/naira_wallet.dart';
+import 'package:syarpa/screens/wallet/pound_sterling_wallet.dart';
 import 'package:syarpa/utils/colors.dart';
 import 'package:syarpa/utils/constant.dart';
 import 'package:syarpa/widgets/wallet_card.dart';
@@ -249,7 +251,11 @@ class _WalletScreenState extends State<WalletScreen> {
                             walletTypeIcon: "assets/images/gbp_wallet_icon.png", 
                             walletTypeText: "GBP wallet", 
                             walletAmountText: "£0.00",
-                            onPress: (){},
+                            onPress: (){
+                              Navigator.of(context).pushNamed(
+                                GBPWalletScreen.id,
+                              );
+                            },
                           ),
                         ],
                       ),
@@ -262,7 +268,11 @@ class _WalletScreenState extends State<WalletScreen> {
                           walletTypeIcon: "assets/images/usd_wallet_icon.png", 
                           walletTypeText: "USD wallet", 
                           walletAmountText: "\$0.00",
-                          onPress: (){},
+                          onPress: (){
+                            Navigator.of(context).pushNamed(
+                              DollarWalletScreen.id,
+                            );
+                          },
                         ),
                       ),
 

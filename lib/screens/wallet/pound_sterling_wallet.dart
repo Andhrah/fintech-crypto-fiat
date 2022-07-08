@@ -4,34 +4,33 @@ import 'package:flutter_svg/svg.dart';
 import 'package:remixicon/remixicon.dart';
 import 'package:syarpa/utils/colors.dart';
 import 'package:syarpa/utils/constant.dart';
-import 'package:syarpa/widgets/wallet_card.dart';
 
-class NairaWalletScreen extends StatefulWidget {
+class GBPWalletScreen extends StatefulWidget {
   
-  static const String id = 'nairaWallet';
+  static const String id = 'gbpWallet';
 
-  const NairaWalletScreen({Key? key}) : super(key: key);
+  const GBPWalletScreen({Key? key}) : super(key: key);
 
   @override
-  _NairaWalletScreenState createState() => _NairaWalletScreenState();
+  _GBPWalletScreenState createState() => _GBPWalletScreenState();
 }
 
-class _NairaWalletScreenState extends State<NairaWalletScreen> {
+class _GBPWalletScreenState extends State<GBPWalletScreen> {
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(
-      const SystemUiOverlayStyle(
-        statusBarColor: Color(0xFF008E16),
-        statusBarIconBrightness: Brightness.light,
-      ),
-    );
+    // SystemChrome.setSystemUIOverlayStyle(
+    //   const SystemUiOverlayStyle(
+    //     statusBarColor: Color(0xFF008E16),
+    //     statusBarIconBrightness: Brightness.light,
+    //   ),
+    // );
     return Scaffold(
       body: SingleChildScrollView(
         child: SafeArea(
           child: Column(
             children: [
               Container(
-                color: const Color(0xFF008E16),
+                color: appPrimaryColor,
                 padding: const EdgeInsets.symmetric(horizontal: 25.0, vertical: 10.0),
                 height: MediaQuery.of(context).size.height / 3.4,
                 child: Column(
@@ -88,7 +87,7 @@ class _NairaWalletScreenState extends State<NairaWalletScreen> {
                             ),
 
                             const Text(
-                              "₦ 420.00",
+                              "£ 420.00",
                               style: TextStyle(
                                 color: whiteColor,
                                 fontWeight: FontWeight.w600,
@@ -97,13 +96,6 @@ class _NairaWalletScreenState extends State<NairaWalletScreen> {
                             ),
                           ],
                         ),
-
-                        // Image.asset(
-                        //   'assets/images/profile_img.png',
-                        //   width: 62,
-                        //   height: 62,
-                        //   fit: BoxFit.fill,
-                        // ),
                       ],
                     ),
 
@@ -300,7 +292,7 @@ class _NairaWalletScreenState extends State<NairaWalletScreen> {
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
                             const Text(
-                              "-NGN 5,000",
+                              "-GBP 5,000",
                               style: TextStyle(
                                 color: secondaryColor,
                                 fontWeight: FontWeight.w400,
@@ -371,7 +363,7 @@ class _NairaWalletScreenState extends State<NairaWalletScreen> {
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
                             const Text(
-                              "NGN 5,000",
+                              "GBP 5,000",
                               style: TextStyle(
                                 color: lightBlueColor,
                                 fontWeight: FontWeight.w400,
@@ -453,7 +445,7 @@ class _NairaWalletScreenState extends State<NairaWalletScreen> {
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
                             const Text(
-                              "-NGN 5,000",
+                              "-GBP 5,000",
                               style: TextStyle(
                                 color: secondaryColor,
                                 fontWeight: FontWeight.w400,
@@ -524,7 +516,7 @@ class _NairaWalletScreenState extends State<NairaWalletScreen> {
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
                             const Text(
-                              "NGN 5,000",
+                              "GBP 5,000",
                               style: TextStyle(
                                 color: lightBlueColor,
                                 fontWeight: FontWeight.w400,

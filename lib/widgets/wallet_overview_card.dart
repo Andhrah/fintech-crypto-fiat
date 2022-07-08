@@ -4,8 +4,8 @@ import 'package:remixicon/remixicon.dart';
 import 'package:syarpa/utils/colors.dart';
 import 'package:syarpa/utils/constant.dart';
 
-class WalletOverviewCard extends StatelessWidget {
-  const WalletOverviewCard({
+class DashboardHeader extends StatelessWidget {
+  const DashboardHeader({
     Key? key,
     required this.bgImgUrl,
     required this.bgcolor,
