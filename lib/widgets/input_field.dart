@@ -10,6 +10,8 @@ class InputField extends StatelessWidget {
     this.hintText,
     this.suffixIcon,
     this.suffix,
+    this.prefix,
+    this.prefixIcon,
     required this.borderColor,
     // this.maxLines,
     this.area,
@@ -22,6 +24,8 @@ class InputField extends StatelessWidget {
     required this.obscureText,
     this.maxLines, this.textColor,
     this.enabled,
+    this.textAlign = TextAlign.start,
+    this.initialValue
   }) : _node = node, super(key: key);
 
   final TextEditingController? textController;
@@ -42,7 +46,11 @@ class InputField extends StatelessWidget {
   final bool obscureText;
   final int? maxLines;
   final Widget? suffix;
+  final Widget? prefix;
+  final Widget? prefixIcon;
   final bool? enabled;
+  final TextAlign textAlign;
+  final String? initialValue;
 
 
   @override
@@ -63,6 +71,9 @@ class InputField extends StatelessWidget {
           autovalidateMode: autovalidateMode,
           obscureText: obscureText,
           enabled: enabled,
+          textAlign: textAlign,
+          style: TextStyle(color: textColor),
+          initialValue: initialValue,
           decoration: InputDecoration(
             contentPadding: const EdgeInsets.symmetric(vertical: 13.0, horizontal: 10.0),
             floatingLabelBehavior: FloatingLabelBehavior.always,
@@ -82,6 +93,8 @@ class InputField extends StatelessWidget {
             hintStyle: const TextStyle(fontSize: 18.0, color: blueGrayColor, fontWeight: FontWeight.w400),
             suffixIcon: suffixIcon,
             suffix: suffix,
+            prefix: prefix,
+            prefixIcon: prefixIcon,
           ),
         )
       ],

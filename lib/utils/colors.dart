@@ -19,8 +19,10 @@ const Color ashColor = Color(0xFFC4C4C4);
 const Color disabledColor = Color(0xFFEFF2F7);
 const Color disabledTextColor = Color(0xFFC0CCDA);
 const Color lightLilacColor = Color(0xFF8393F1);
+const Color lilacBgColor = Color(0xFFEDF0FF);
 const Color ashCyanColor =  Color(0xFF4CC9F0);
 const Color deepBlueColor =  Color(0xFF183B56);
+const Color cyanColor =  Color(0xFF00B3F5);
 
 const Color lightNavi = Color.fromRGBO(9, 66, 125, 0.35);
 const Color teal = Color(0xFF47A08B);

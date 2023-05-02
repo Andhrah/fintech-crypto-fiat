@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:remixicon/remixicon.dart';
+import 'package:syarpa/screens/fund/add_fund/add_fund_wallet.dart';
 import 'package:syarpa/utils/colors.dart';
 import 'package:syarpa/utils/constant.dart';
 import 'package:syarpa/widgets/button.dart';
@@ -35,20 +36,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   color: appPrimaryColor,
                   padding: const EdgeInsets.symmetric(horizontal: 25.0, vertical: 10.0),
                   height: MediaQuery.of(context).size.height / 3.4,
-                  // decoration: const BoxDecoration(
-                  //   color: Colors.white,
-                  //   image: DecorationImage(
-                  //     image: AssetImage('assets/images/home_background.png'),
-                  //     fit: BoxFit.cover,
-                  //   ),
-                  // ),
-                  // child: Center(
-                  //   child: Image.asset(
-                  //     "assets/images/syarpa_logo.png",
-                  //     // height: MediaQuery.of(context).size.height / 3,
-                  //     width: MediaQuery.of(context).size.width / 1.8,
-                  //   )
-                  // ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -170,7 +157,11 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
 
                           InkWell(
-                            onTap: (){},
+                            onTap: (){
+                              Navigator.of(context).pushNamed(
+                                AddFundWalletScreen.id,
+                              );
+                            },
                             child: Card(
                               child: Container(
                                 width: MediaQuery.of(context).size.width / 4,

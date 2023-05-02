@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:remixicon/remixicon.dart';
+import 'package:syarpa/screens/fund/add_fund/add_fund_wallet.dart';
 import 'package:syarpa/screens/wallet/dollar_wallet.dart';
 import 'package:syarpa/screens/wallet/naira_wallet.dart';
 import 'package:syarpa/screens/wallet/pound_sterling_wallet.dart';
@@ -159,7 +160,11 @@ class _WalletScreenState extends State<WalletScreen> {
                           ),
 
                           InkWell(
-                            onTap: (){},
+                            onTap: (){
+                              Navigator.of(context).pushNamed(
+                                AddFundWalletScreen.id,
+                              );
+                            },
                             child: Card(
                               child: Container(
                                 width: MediaQuery.of(context).size.width / 4,

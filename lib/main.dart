@@ -12,13 +12,16 @@ import 'package:syarpa/screens/auth/profile_update.dart';
 import 'package:syarpa/screens/auth/reset_password.dart';
 import 'package:syarpa/screens/auth/signup.dart';
 import 'package:syarpa/screens/auth/two_FA.dart';
+import 'package:syarpa/screens/fund/add_fund/add_fund_wallet.dart';
+import 'package:syarpa/screens/fund/add_fund/payment_method.dart';
+import 'package:syarpa/screens/fund/add_fund/payment_processing.dart';
+import 'package:syarpa/screens/fund/add_fund/payment_review.dart';
 import 'package:syarpa/screens/onboarding/onboarding.dart';
 import 'package:syarpa/screens/onboarding/splashscreen.dart';
 import 'package:syarpa/screens/tab.dart';
 import 'package:syarpa/screens/wallet/dollar_wallet.dart';
 import 'package:syarpa/screens/wallet/naira_wallet.dart';
 import 'package:syarpa/screens/wallet/pound_sterling_wallet.dart';
-import 'package:syarpa/screens/wallet/wallet.dart';
 import 'package:syarpa/utils/colors.dart';
 
 void main() {
@@ -54,7 +57,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         // primarySwatch: Colors.blue,
       ),
-      initialRoute: SplashScreen.id,
+      initialRoute: Tabs.id,
       routes: {
         SplashScreen.id: (context) => const SplashScreen(),
         OnboardingScreen.id: (context) => const OnboardingScreen(),
@@ -74,6 +77,10 @@ class MyApp extends StatelessWidget {
         NairaWalletScreen.id: (context) => const NairaWalletScreen(),
         DollarWalletScreen.id: (context) => const DollarWalletScreen(),
         GBPWalletScreen.id: (context) => const GBPWalletScreen(),
+        AddFundWalletScreen.id: (context) => const AddFundWalletScreen(),
+        AddFundPaymentMethodScreen.id: (context) => const AddFundPaymentMethodScreen(),
+        AddFundPaymentReviewScreen.id: (context) => const AddFundPaymentReviewScreen(),
+        AddFundPaymentProcessed.id: (context) => const AddFundPaymentProcessed(),
       }
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
