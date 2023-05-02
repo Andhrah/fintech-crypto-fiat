@@ -1,4 +1,4 @@
-# syarpa
+# Fintech crypto-Fiat app
 
 A new Flutter project.
 
